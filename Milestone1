@@ -1,0 +1,153 @@
+#Part 1
+dict = {}
+def s(dna):
+    dna = dna.upper()
+    for amino in dna:
+        dict['A'] = dna.count('A')
+        dict['C'] = dna.count('C') 
+        dict['G'] = dna.count('G') 
+        dict['T'] = dna.count('T')
+    return dict
+
+#Part 2
+def dna2rna(dna):
+    rna = ''
+    for amino in dna:
+        if amino == 'A':
+            rna += 'A'
+        elif amino == 'T':
+            rna += 'U'
+        elif amino == 'G':
+            rna += 'G'
+        else:
+            rna += 'C'
+    return rna
+  
+#Part 3
+def reverse_complement(dna):
+    dna = dna[::-1]
+    result = ''
+    for amino in dna:
+        if amino == 'A':
+            result += 'T'
+        elif amino == 'C':
+            result += 'G'
+        elif amino == 'T':
+            result += 'A'
+        else:
+            result += 'C'
+    return result
+
+#Part 4
+def mendels_law(hom, het, rec):
+    a = hom
+    b = het
+    c = rec
+    total = a + b + c
+    
+    aa = (a/total) * (a-1)/(total-1)
+    ab = (a/total) * (b)/(total-1)
+    ac = (a/total) * (c)/(total-1)
+    ba = (b/total) * (a)/(total-1)
+    bb = (b/total) * (b-1)/(total-1) * 0.75
+    bc = (b/total) * (c)/(total-1) * 0.5
+    ca = (c/total) * (a)/(total-1) 
+    cb = (c/total) * (b)/(total-1) * 0.5
+    
+    result = aa + ab + ac + ba + bb + bc + ca + cb
+    return result
+#Part 5 
+def fibonacci_rabbits(n,k):
+    n=1
+    k=1
+    count = 0
+    while count < n
+    offspring = 
+#Part 6
+def gc_content(dna_list):
+    total = 0
+    highest_GC = 0
+    per_nucleotides = 0
+    for i in dna_list:
+        a = dna_list.count('C')
+        b = dna_list.count('G')
+        total = a+b
+        if total > total:
+            highest_GC = i 
+            per_nucleotides = total/len(i)
+        
+        
+    return highest_GC, per_nucleotides 
+#Part 7
+
+#Part 8
+def loacte_substring(dna_snippet, dna):
+    for i in dna:
+        a = dna.find(dna_snippet)
+        b = dna.find(dna_snippet,a+ len(dna_snippet), len(dna))
+#Part 9
+def hamming_dist(dna1, dna2):
+    hammingdist = 0
+    for letter in zip(dna1, dna2):
+        if letter[0] != letter[1]:
+            hammingdist += 1
+        else:
+            pass
+    return hammingdist
+
+#Part 10
+def count_dom_phenotype(genotypes):
+    total = 0
+    total += genotypes[0]*2
+    total += genotypes[1]*2
+    total += genotypes[2]*2
+    total += genotypes[3]*1.5
+    total += genotypes[4]
+    return total
+
+#Part 11
+def source_rna(protein):
+    total = 1
+    for amino in protein:
+        if amino == 'F':
+            total *= 2
+        elif amino == 'L':
+            total *= 6
+        elif amino == 'S':
+            total *= 6
+        elif amino == 'Y':
+            total *= 2
+        elif amino == 'C':
+            total *= 2
+        elif amino == 'P':
+            total *= 4
+        elif amino == 'H':
+            total *= 2
+        elif amino == 'Q':
+            total *= 2
+        elif amino == 'R':
+            total *= 6
+        elif amino == 'I':
+            total *= 3
+        elif amino == 'T':
+            total *= 4
+        elif amino == 'N':
+            total *= 2
+        elif amino == 'K':
+            total *= 2
+        elif amino == 'V':
+            total *= 4
+        elif amino == 'A':
+            total *= 4
+        elif amino == 'D':
+            total *= 2
+        elif amino == 'E':
+            total *= 2
+        elif amino == 'G':
+            total *= 4
+        else:
+            total *=1
+    total *= 3
+    return total
+            
+  
